@@ -3,10 +3,11 @@ package fr.formation.smellyspring.dtos;
 public class SmellyUserOutDto {
 
     private Long id;
+
     private String username;
 
     public SmellyUserOutDto(Long id, String username) {
-	id = this.id;
+	this.id = id;
 	this.username = username;
     }
 
