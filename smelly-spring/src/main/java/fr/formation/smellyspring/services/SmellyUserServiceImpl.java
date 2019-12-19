@@ -14,6 +14,10 @@ public class SmellyUserServiceImpl implements SmellyUserService {
 
     private SmellyUserRepository repo;
 
+    public SmellyUserServiceImpl(SmellyUserRepository repo) {
+	this.repo = repo;
+    }
+
     @Override
     public SmellyUserOutDto getSmellyUserOutDto() {
 	return new SmellyUserOutDto(null, "Hello smelly user!");
