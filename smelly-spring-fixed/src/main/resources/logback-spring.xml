@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<!-- Change pattern to "%logger - %msg%n" in order to display fully qualified name of class -->
+			<pattern>%logger - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<root level="info">
+		<appender-ref ref="STDOUT" />
+	</root>
+	
+	<!-- Change level from "error" to "debug" in order to match invoked method in SmellyUserController -->
+	<logger name="fr.formation.smellyspring.controllers.SmellyUserController" additivity="false" level="debug">
+		<appender-ref ref="STDOUT" />
+	</logger>
+	
+	<!-- Declare a new logger with name "MY_LOGGER" and level "trace" -->
+	<logger name="MY_LOGGER" additivity="false" level="trace">
+		<appender-ref ref="STDOUT" />
+	</logger>
+
+</configuration>
